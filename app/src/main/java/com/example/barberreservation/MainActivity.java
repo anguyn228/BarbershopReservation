@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password);
         signIn = (Button) findViewById(R.id.loginbtn1);
         register = (Button) findViewById(R.id.signupbtnreturn);
-
+        testDatabase();
         signIn.setOnClickListener(v ->
         {
             String userN = username.getText().toString().trim();
@@ -94,6 +94,19 @@ public class MainActivity extends AppCompatActivity {
 
             default:
                 break;
+        }
+    }
+
+    public void testDatabase() {
+        DatabaseHelper databaseHelper = new DatabaseHelper(this);
+        databaseHelper.getReadableDatabase();
+
+        UserModel userModel = new UserModel(1, "User", "userId", "2", "user");
+        databaseHelper.addUser(userModel);
+
+        ArrayList<UserModel> userModels = databaseHelper.retrieveAllUsers();
+        for (int i = 0; i < userModels.size(); ++i) {
+            System.out.println(userModels.get(i).getName());
         }
     }
 }

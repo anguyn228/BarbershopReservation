@@ -9,9 +9,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
+
 import java.util.ArrayList;
 
-public class DatabaseHelper extends SQLiteOpenHelper {
+public class DatabaseHelper extends SQLiteAssetHelper {
     // User table
     public static final String USER_TABLE = "USER_TABLE";
     public static final String COLUMN_NAME = "NAME";
@@ -39,23 +41,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         super(context, "barbershopData.db", null, 1);
     }
 
-    @Override
-    public void onCreate(SQLiteDatabase db) {
+    //@Override
+    //public void onCreate(SQLiteDatabase db) {
         // CREATE TABLE WITH USER
-        String userTable = "CREATE TABLE " + USER_TABLE + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_NAME + " TEXT, " +COLUMN_TITLE + "TEXT,"+ COLUMN_USERID + " TEXT, " + COLUMN_PASSWORD + " TEXT )";
-        db.execSQL(userTable);
+      //  String userTable = "CREATE TABLE " + USER_TABLE + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_NAME + " TEXT, " +COLUMN_TITLE + "TEXT,"+ COLUMN_USERID + " TEXT, " + COLUMN_PASSWORD + " TEXT )";
+       // db.execSQL(userTable);
 
 
 
 
-        String staffTable = "CREATE TABLE " + STAFF_TABLE + "(" + COL_ID +
-                " INTEGER PRIMARY KEY AUTOINCREMENT, " + COL_uID + "TEXT, " + COL_TITLE + " TEXT, " + COL_NAME + " TEXT, "  + " TEXT, " + COL_BIO + " TEXT, " + COL_SHIFT + " TEXT )" ;
-        db.execSQL(staffTable);
+       // String staffTable = "CREATE TABLE " + STAFF_TABLE + "(" + COL_ID +
+            //    " INTEGER PRIMARY KEY AUTOINCREMENT, " + COL_uID + "TEXT, " + COL_TITLE + " TEXT, " + COL_NAME + " TEXT, "  + " TEXT, " + COL_BIO + " TEXT, " + COL_SHIFT + " TEXT )" ;
+      //  db.execSQL(staffTable);
 
 
 
 
-    }
+   // }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
@@ -180,4 +182,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return staffModels;
     }
+
+
 }
