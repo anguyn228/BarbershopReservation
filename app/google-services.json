@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "936930914101",
+    "project_id": "barber-a2ced",
+    "storage_bucket": "barber-a2ced.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936930914101:android:4458a091e42f027a34e67c",
+        "android_client_info": {
+          "package_name": "com.example.barberreservation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936930914101-70us06115s3rlv2i1vvteenmteko9rsp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuvVQzRK2AiioAj9iK5-8Jl6Mh4KbwcNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936930914101-70us06115s3rlv2i1vvteenmteko9rsp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
